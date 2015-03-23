@@ -1,0 +1,54 @@
+Enter file contents here// Exerc4.31_4.32.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include "stdio.h"
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+	int aux = 0;
+	int n, esp, ast, linha, c = 0;
+	n = 9;
+
+	ast = 1;
+	esp = (n - 1) / 2;
+	for (linha = 1; esp > 0; linha++){
+
+		for (c = 1; c <= esp; c++){
+			printf("%s", " ");
+		}
+		for (c = 1; c <= ast; c++){
+			printf("%s", "*");
+		}
+		
+
+		esp--;
+		ast += 2;
+		printf(" %s", "\n");
+	}
+
+	for (linha = 1; ast > 0; linha++){
+
+		for (c = 1; c <= esp; c++){
+			printf("%s", " ");
+		}
+		for (c = 1; c <= ast; c++){
+			printf("%s", "*");
+		}
+		esp++;
+		ast -= 2;
+		printf(" %s", "\n");
+	}
+
+
+
+
+	
+
+
+
+
+	scanf("%d", aux);
+
+	return 0;
+}
